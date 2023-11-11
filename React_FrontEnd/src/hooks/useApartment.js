@@ -15,8 +15,6 @@ const useApartment = (id) => {
         if (err instanceof CanceledError) return;
         setError(err);
       });
-    // const apartment = aprtmentList.data[id - 1];
-    // setApartment(apartment);
     return () => controller.abort();
   }, [id]);
 

@@ -124,8 +124,6 @@ const ApartmentCreate = () => {
         Create
       </Button>
       </center>
-
-      {/* </InputGroup> */}
     </FormControl>
   );
 };

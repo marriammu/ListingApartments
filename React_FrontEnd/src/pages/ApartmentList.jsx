@@ -1,7 +1,6 @@
 
 import { Box, SimpleGrid, Text, Heading } from "@chakra-ui/react";
 import useApartments from "../hooks/useApartments";
-// import ApartmentCard from "../components/ApartmentCard";
 import ApartmentCardContainer from "../components/ApartmentCardContainer";
 import { Link } from "react-router-dom";
 
