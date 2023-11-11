@@ -12,8 +12,8 @@ const ApartmentDetailPage = () => {
   const [hoveredImage, setHoveredImage] = useState(0);
 
   const staticImages = [
-    'https://www.nawy.com/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fprod.images.cooingestate.com%2Fadmin%2Fproperty_image%2Fimage%2F6946%2Fmedium_tkmHhFGKDlZQlMeXpg0AibPNClNJwf1.jpg&w=1080&q=75',
     'https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/201231/Screenshot_1.png',
+    'https://www.nawy.com/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fprod.images.cooingestate.com%2Fadmin%2Fproperty_image%2Fimage%2F6946%2Fmedium_tkmHhFGKDlZQlMeXpg0AibPNClNJwf1.jpg&w=1080&q=75',
     'https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/201222/Screenshot_3.png',
   ];
 

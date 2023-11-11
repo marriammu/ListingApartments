@@ -14,8 +14,7 @@ const ApartmentCreate = () => {
     bedCount: "",
     compound: "",
     deliveryDate: "",
-    image:
-      "https://www.nawy.com/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fprod.images.cooingestate.com%2Fadmin%2Fproperty_image%2Fimage%2F6946%2Fmedium_tkmHhFGKDlZQlMeXpg0AibPNClNJwf1.jpg&w=1080&q=75",
+    
   });
   const handleChange = (event, key) => {
     console.log(event);
@@ -41,8 +40,7 @@ const ApartmentCreate = () => {
       bedCount: "",
       compound: "",
       deliveryDate: "",
-      image:
-        "https://www.nawy.com/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fprod.images.cooingestate.com%2Fadmin%2Fproperty_image%2Fimage%2F6946%2Fmedium_tkmHhFGKDlZQlMeXpg0AibPNClNJwf1.jpg&w=1080&q=75",
+      
     });
   };
 

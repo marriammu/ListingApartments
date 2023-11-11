@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import aprtmentList from "../data/apartments";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 const useApartment = (id) => {

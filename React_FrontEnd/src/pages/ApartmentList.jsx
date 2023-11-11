@@ -1,8 +1,8 @@
 
 import { Box, SimpleGrid, Text, Heading } from "@chakra-ui/react";
 import useApartments from "../hooks/useApartments";
-import ApartmentCardContainer from "../components/ApartmentCardContainer";
 import { Link } from "react-router-dom";
+import ApartmentCard from "../components/ApartmentCard";
 
 const ApartmentList = () => {
   const { apartments, error } = useApartments();
@@ -17,7 +17,7 @@ const ApartmentList = () => {
         {apartments.map((apartment) => (
           <Link key={apartment.ID} to={`/apartments/${apartment.ID}`} textDecoration="none">
 
-              <ApartmentCardContainer apartment={apartment} />
+              <ApartmentCard apartment={apartment} />
           </Link>
         ))}
       </SimpleGrid>
