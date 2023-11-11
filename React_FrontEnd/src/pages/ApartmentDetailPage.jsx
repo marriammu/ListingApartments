@@ -86,7 +86,7 @@ const ApartmentDetailPage = () => {
         <Flex align="center" fontSize="lg" mb={2}>
           <Icon as={FaChair} mr={2} />
           <Text fontWeight="bold" mr={1}>
-            IsFurnished:
+            Furnished:
           </Text>{' '}
           {apartment.IsFurnished}
         </Flex>

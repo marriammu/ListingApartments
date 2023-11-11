@@ -45,7 +45,7 @@ const ApartmentCreate = () => {
   };
 
   return (
-    <FormControl
+    <FormControl isRequired
       backgroundColor="rgb(228, 235, 242)"
       padding={10}
       borderRadius={6}
@@ -56,58 +56,63 @@ const ApartmentCreate = () => {
           value={apartmentInfo.compound}
           onChange={(event) => handleChange(event, "compound")}
           borderRadius={15}
-          placeholder="compound name"
+          placeholder="Compound name"
           backgroundColor="white"
         />
         <Input
           value={apartmentInfo.area}
           onChange={(event) => handleChange(event, "area")}
           borderRadius={15}
-          placeholder="area"
+          placeholder="Area"
           backgroundColor="white"
         />
         <Input
           value={apartmentInfo.space}
           onChange={(event) => handleChange(event, "space")}
           borderRadius={15}
-          placeholder="space"
+          placeholder="Space"
           backgroundColor="white"
+          type="number"
         />
         <Input
           value={apartmentInfo.priceRange}
           onChange={(event) => handleChange(event, "priceRange")}
           borderRadius={15}
-          placeholder="priceRange"
+          placeholder="Price range [1M - 4M]"
           backgroundColor="white"
         />
         <Input
           value={apartmentInfo.paymentPlan}
           onChange={(event) => handleChange(event, "paymentPlan")}
           borderRadius={15}
-          placeholder="paymentPlan"
+          placeholder="Payment plan [20K per month - 6Years]"
           backgroundColor="white"
         />
         <Input
           value={apartmentInfo.roomCount}
           onChange={(event) => handleChange(event, "roomCount")}
           borderRadius={15}
-          placeholder="roomCount"
+          placeholder="Room count"
           backgroundColor="white"
+          type="number"
         />
         <Input
           value={apartmentInfo.bedCount}
           onChange={(event) => handleChange(event, "bedCount")}
           borderRadius={15}
-          placeholder="bedCount"
+          placeholder="Bed count"
           backgroundColor="white"
           type="number"
         />
         <Input
           value={apartmentInfo.deliveryDate}
+          placeholder="Delivery date [YYYY-MM-DD]"
+          keyboardType="numeric"
           onChange={(event) => handleChange(event, "deliveryDate")}
           borderRadius={15}
           backgroundColor="white"
-          type="date"
+          type="number"
+          
         />
         <RadioGroup  value={apartmentInfo.isFurnished}  onChange={(event) => handleRadio(event, "isFurnished")} >
           
@@ -127,3 +132,4 @@ const ApartmentCreate = () => {
 };
 
 export default ApartmentCreate;
+
