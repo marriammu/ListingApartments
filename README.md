@@ -11,9 +11,9 @@ cd React_FrontEnd
 npm install
 npm run dev
 ## features
--Show list of apartments
--View apartment details
--Create apartment
+- Show list of apartments
+- View apartment details
+- Create apartment
 #tools
 - react
 - react-dom
@@ -35,9 +35,9 @@ scan QR code to connect with app
 ## Connect to backend
 change ip to your wifi ip from api-client.js file inside services in the project
 ## features
--Show list of apartments
--View apartment details
--Create apartment
+- Show list of apartments
+- View apartment details
+- Create apartment
 ##tools
 - react
 - react-native

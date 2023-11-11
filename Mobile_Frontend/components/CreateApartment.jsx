@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet ,  TouchableOpacity,} from "react-native";
 import useApartments from "../hooks/useApartments";
 import apartmentCreate from "../services/apartment-create";
 import { RadioButton } from "react-native-paper";
@@ -130,7 +130,13 @@ const CreateApartment = ({ route, navigation }) => {
         </View>
         {/* Add more options as needed */}
       </RadioButton.Group>
-      <Button style={styles.button} title="Create" onPress={handleCreateApartment} />
+      <TouchableOpacity
+  style={styles.button}
+  onPress={handleCreateApartment}
+>
+  <Text style={styles.buttonText}>Create</Text>
+</TouchableOpacity>
+      {/* <Button style={styles.button} title="Create" onPress={handleCreateApartment} /> */}
     </View>
   );
 };
@@ -143,7 +149,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   button:{
-    color: "gray"
+    backgroundColor: "#fff",
+    color :"#fff",
+    borderRadius: 8,
+    padding: 8,
+    alignItems: "center",
+    marginTop: 16,
+  },
+
+  buttonText: {
+    color: "#245282",
+    fontSize: 16,
+    fontWeight: "bold",
   },
   title: {
     fontSize: 24,
