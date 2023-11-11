@@ -177,9 +177,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   radioButtonContainer: {
-    flexDirection: "row",  // Align items horizontally
+    flexDirection: "row", 
     marginTop: 8,
-    alignItems: "center",  // Center items vertically (adjust as needed)
+    alignItems: "center", 
   },
 });
 
