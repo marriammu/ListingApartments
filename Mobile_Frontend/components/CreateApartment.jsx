@@ -1,7 +1,6 @@
-import axios from "axios";
+
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet ,  TouchableOpacity,} from "react-native";
-import useApartments from "../hooks/useApartments";
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, } from "react-native";
 import apartmentCreate from "../services/apartment-create";
 import { RadioButton } from "react-native-paper";
 
@@ -26,7 +25,6 @@ const CreateApartment = ({ route, navigation }) => {
   const [checked, setChecked] = useState("Yes");
 
   const isFormValid = () => {
-    // Add validation logic here
     return (
       apartmentInfo.compound &&
       apartmentInfo.area &&
@@ -42,7 +40,6 @@ const CreateApartment = ({ route, navigation }) => {
   const handleCreateApartment = () => {
     if (isFormValid()) {
       apartmentCreate(apartmentInfo).then((res) => {
-        console.log(route.params);
         if (route.params && route.params.refreshList) {
           route.params.refreshList();
         }
@@ -55,7 +52,6 @@ const CreateApartment = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* <Text style={styles.title}>Add Apartment</Text> */}
       <TextInput
         style={styles.input}
         placeholder="Compound"
@@ -113,7 +109,6 @@ const CreateApartment = ({ route, navigation }) => {
         keyboardType="numeric"
         placeholder="Delivery date [YYYY-MM-DD]"
         value={apartmentInfo.deliveryDate}
-        // type = "date"
         onChangeText={(value) => handleChange(value, "deliveryDate")}
         required
       />
@@ -121,22 +116,21 @@ const CreateApartment = ({ route, navigation }) => {
         value={apartmentInfo.isFurnished}
         onValueChange={(value) => handleChange(value, "isFurnished")}
       >
-        
+
         <View style={styles.radioButtonContainer}>
           <RadioButton value="Yes" />
           <Text>Furnished</Text>
           <RadioButton value="No" />
           <Text>Not Furnished</Text>
         </View>
-        {/* Add more options as needed */}
       </RadioButton.Group>
       <TouchableOpacity
-  style={styles.button}
-  onPress={handleCreateApartment}
->
-  <Text style={styles.buttonText}>Create</Text>
-</TouchableOpacity>
-      {/* <Button style={styles.button} title="Create" onPress={handleCreateApartment} /> */}
+        style={styles.button}
+        onPress={handleCreateApartment}
+      >
+        <Text style={styles.buttonText}>Create</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
@@ -148,9 +142,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  button:{
+  button: {
     backgroundColor: "#fff",
-    color :"#fff",
+    color: "#fff",
     borderRadius: 8,
     padding: 8,
     alignItems: "center",
@@ -177,9 +171,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   radioButtonContainer: {
-    flexDirection: "row", 
+    flexDirection: "row",
     marginTop: 8,
-    alignItems: "center", 
+    alignItems: "center",
   },
 });
 

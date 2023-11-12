@@ -8,7 +8,6 @@ exports.getAllApartments = (req, res) => {
       res.status(res.statusCode).json({ error: err.message });
       return;
     }
-    console.log(res.statusCode);
     res.status(res.statusCode).json({
       message: "success",
       data: records,
@@ -52,7 +51,6 @@ exports.addApartment = (req, res) => {
     res.status(res.statusCode).json({ error: "Missing required fields" });
     return;
   }
-  console.log(req.body);
   var sql =
     "INSERT INTO Apartments (Space,Area,PriceRange,PaymentPlan,IsFurnished,RoomCount,BedCount,Compound,DeliveryDate)\
      VALUES (?,?,?,?,?,?,?,?,?)";
